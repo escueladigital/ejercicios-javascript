@@ -1,2 +1,43 @@
-body {
-  color: #6666ff; }
+.menu, .menu--child {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style: none;
+  background: tomato;
+  width: 50%;
+  margin-left: 25%; }
+  .menu__link {
+    text-decoration: none;
+    display: block;
+    padding: 0 1em;
+    color: #fff;
+    text-align: center; }
+  .menu__item {
+    line-height: 3;
+    -webkit-flex: auto;
+        -ms-flex: auto;
+            flex: auto;
+    font-family: sans-serif;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
+    .menu__item:hover {
+      background: #ff3814; }
+  .menu.horizontal, .horizontal.menu--child {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
+  .menu.horizontal .menu__item, .horizontal.menu--child .menu__item {
+    position: relative;
+    border-bottom: none; }
+
+.menu--child {
+  background: #ff4d2e;
+  margin-left: 0;
+  display: none;
+  width: 100%; }
+  .menu--child.show {
+    display: block; }
+  .horizontal .menu--child {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 10em; }

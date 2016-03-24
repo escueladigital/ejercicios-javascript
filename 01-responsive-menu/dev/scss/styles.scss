@@ -1,4 +1,53 @@
-$color: blue;
-body {
-  color: lighten($color,20);
+$bg: tomato;
+$color: #fff;
+.menu {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style: none;
+  background: $bg;
+  width: 50%;
+  margin-left: 25%;
+
+  &__link {
+    text-decoration: none;
+    display: block;
+    padding: 0 1em;
+    color: $color;
+    text-align: center;
+  }
+  &__item {
+    line-height: 3;
+    flex: auto;
+    font-family: sans-serif;
+    border-bottom: 1px solid rgba(#fff,.1);
+    &:hover {
+      background: darken($bg,10);
+    }
+  }
+
+  &.horizontal {
+    display: flex;
+  }
+  &.horizontal &__item {
+    position: relative;
+    border-bottom: none;
+  }
+}
+
+.menu--child {
+  @extend .menu;
+  background: darken($bg,5);
+  margin-left: 0;
+  display: none;
+  width: 100%;
+  &.show {
+    display: block;
+  }
+  .horizontal & {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 10em;
+  }
 }
