@@ -1,5 +1,4 @@
-// check if a menu__item contains a child menu
-
+// Check if a menu__item contains a child menu
 var menu = document.getElementById('menu');
 var menuItems = menu.children;
 var breakpoint = 1000;
